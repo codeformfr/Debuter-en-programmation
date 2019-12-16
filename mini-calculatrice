@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    //declaration des variables
+    char operateur;
+    float ope1;
+    float ope2;
+    float resultat=0.0;
+
+    printf("veuillez entrer votre operation (ex:3*3):\n");
+    scanf("%f%c%f",&ope1,&operateur,&ope2);
+
+    // test de la validité de l'operateur
+    while(operateur!='+'&& operateur != '-'&& operateur !="*"&& ( ope1 =='/' && ope2 !=0)){
+        printf("operateur non valide , veuillez utiliser (+,-,*)");
+        scanf("%f%c%f",&ope1,&operateur,&ope2);
+    }
+
+    if (operateur == '+'){
+        resultat = ope1 + ope2;
+        printf("le résultat est : %.2f\n", resultat);
+    }
+    if (operateur == '-'){
+        resultat = ope1 + ope2;
+        printf("le résultat est : %.2f\n", resultat);
+    }
+    if (operateur == '*'){
+        resultat = ope1 + ope2;
+        printf("le résultat est : %.2f\n", resultat);
+    }
+    return 0;
+}
